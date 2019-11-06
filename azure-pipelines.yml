@@ -10,9 +10,6 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-
-environment: 'dev-env1'
-
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
