@@ -10,7 +10,6 @@ pool:
   vmImage: 'ubuntu-latest'
 
 environment: 'dev-env1'
-
 steps:
 - task: Maven@3
   inputs:
