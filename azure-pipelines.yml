@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  name: 'DevOpsAgents'
+  name: 'ubuntu'
 
 steps:
 - task: Maven@3
