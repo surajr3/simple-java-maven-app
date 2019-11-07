@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  name: 'ubuntu'
+  name: 'HOSTED ubuntu'
 
 steps:
 - task: Maven@3
