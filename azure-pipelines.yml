@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  name: $(pool)
+  vmImage: 'ubuntu-latest'
 
-steps:
-- script: echo $(pool)
+steps: 
+- script: pwd
