@@ -33,4 +33,4 @@ steps:
     containerRegistry: 's6suraj/december'
     repository: 's6suraj/december'
     command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
+    Dockerfile: '$(Build.ArtifactStagingDirectory)'
