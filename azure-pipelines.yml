@@ -9,9 +9,6 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-steps: 
-- script: pwd
-
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
@@ -27,6 +24,9 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+
+steps: 
+- script: pwd
 
 - task: Docker@2
   inputs:
