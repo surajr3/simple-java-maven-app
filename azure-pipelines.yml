@@ -29,8 +29,7 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
-steps: 
-- script: pwd
+- script:  pwd
 
 - task: Docker@2
   inputs:
