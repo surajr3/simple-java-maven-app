@@ -29,11 +29,18 @@ steps:
     Contents: '**/*.jar'
     TargetFolder: '$(build.artifactstagingdirectory)'
 
-- task: PublishBuildArtifacts@1
+
+#- task: PublishBuildArtifacts@1
+  #inputs:
+    #PathtoPublish: '$(build.artifactstagingdirectory)'
+    #ArtifactName: 'drop'
+    #publishLocation: 'Container'
+
+- task: PublishPipelineArtifact@1
   inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+    targetPath: '$(Pipeline.Workspace)'
+    artifact: 'drop'
+    publishLocation: 'pipeline'
 
 - script:  sudo apt-get install tree
 
