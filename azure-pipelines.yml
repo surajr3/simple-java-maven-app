@@ -35,7 +35,9 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
-- script:  tree
+- script:  sudo apt-get install tree
+
+- script: tree
 
 - task: Docker@2
   inputs:
